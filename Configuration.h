@@ -135,7 +135,7 @@
 //#define BLUETOOTH
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Octopus1 20221212-4" //jlm
+#define CUSTOM_MACHINE_NAME "Octopus1 20221212-5" //jlm
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -1482,10 +1482,12 @@
 #define PROBING_MARGIN 5
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (133*60)
+//#define XY_PROBE_FEEDRATE (133*60) //jlm
+#define XY_PROBE_FEEDRATE (266*60) //jlm
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (4*60)
+//#define Z_PROBE_FEEDRATE_FAST (4*60) //jlm
+#define Z_PROBE_FEEDRATE_FAST (15*60) //jlm
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
@@ -2086,7 +2088,8 @@
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
+//#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) } //jlm
+#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (15*60) } //jlm
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
